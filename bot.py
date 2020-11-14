@@ -24,31 +24,6 @@ class InstaBot:
         sleep(5)
         self.driver.find_element_by_xpath("//button[contains(text(),'Not Now')]").click()
         sleep(5)
-        
-    # def get_unfollowers(self):
-    #     self.driver.find_element_by_xpath("//a[contains(@href, '/{}')]".format(self.username)).click()
-
-    # def like_photo(self, hashtag):
-    #     driver = self.driver
-    #     driver.get("https://www.instagram.com/explore/tags/"+ hashtag + "/")
-    #     sleep(3)
-    #     for i in range(1, 3):
-    #         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-    #         sleep(2)
-            
-    #     hrefs = driver.find_elements_by_tag_name('a')
-    #     pic_hrefs = [elem.get_attribute('href') for elem in hrefs]      #error with finding the names by 
-    #     pic_hrefs = [href for href in pic_hrefs if hashtag in href]
-    #     print(hashtag + ' photos: ' + str(len(pic_hrefs)))
-        
-    #     for pic_href in pic_hrefs:
-    #         driver.get(pic_href)
-    #         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-    #         try:
-    #             driver.find_element_by_link_text("Like").click()
-    #             sleep(10)
-    #         except Exception as e:
-    #             sleep(3)
     
     def like_photo(self, hashtag):
         driver = self.driver
@@ -91,8 +66,8 @@ class InstaBot:
         
         
         
-my_bot = InstaBot("casejutsushop", "farhanziad420")
-words = ['DCcomics', 'marvel', 'marvelcomics', 'demonslayer', 'abstract', 'comics', 'kakashi', 'Dabi', 'Deku', 'tokyoghoul', 'kanekiken', 'onepiece', 'luffy', 'luffyace', 'aceonepiece', 'zoro', 'sanji', 'attackontitan', 'shingekinokyojin', 'dragonballz', 'goku', 'levi']
+my_bot = InstaBot("username", "password")       # put your instagram username and password in the following fields.
+words = ['Hashtag', 'Hashtag', 'Hashtag']       # type in the tags without the hashtag symbol inside the apostrophes. For example, 'abstract', 'sky', 'photography' etc.
 for i in words:
     my_bot.like_photo(i)
 
